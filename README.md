@@ -10,12 +10,16 @@
 
 3. Within WSL, run
 
+    ```sh
     ./hello-server-linux-amd64 -external node/main.js
+    ```
 
-4. A webserver starts on port 8000. You may change the port:
+    A webserver starts on port 8000. You may change the port:
 
+    ```sh
     ./hello-server-linux-amd64 -port 9876 -external node/main.js
+    ```
 
-5. Visit the running webserver and interact with the UI.
+4. Visit the running webserver and interact with the UI. Here is a sample of a working setup.
 
 ![](./images/screenshot.png)
