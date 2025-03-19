@@ -8,18 +8,33 @@
 
 2. Clone this repository.
 
-3. Within WSL, run
+3. Ensure you have `node` installed within WSL.
 
     ```sh
-    ./hello-server-linux-amd64 -external node/main.js
+    $ node --version
+    ```
+
+    If you get an error that `node` is not installed, install `nvm`, and then install `node`:
+
+    ```sh
+    $ curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+    $ source ~/.bashrc  # or `source ~/.zshrc` if using Zsh
+    $ nvm install --lts  # Installs the latest LTS version
+    $ nvm use --lts
+    ```
+
+4. Within WSL, run
+
+    ```sh
+    $ ./hello-server-linux-amd64 -external node/main.js
     ```
 
     A webserver starts on port 8000. You may change the port:
 
     ```sh
-    ./hello-server-linux-amd64 -port 9876 -external node/main.js
+    $ ./hello-server-linux-amd64 -port 9876 -external node/main.js
     ```
 
-4. Visit the running webserver and interact with the UI. Here is a sample of a working setup.
+5. Visit the running webserver and interact with the UI. Here is a sample of a working setup.
 
 ![](./images/screenshot.png)
